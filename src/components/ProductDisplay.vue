@@ -1,17 +1,19 @@
+<!-- eslint-disable vue/no-multiple-template-root -->
 <template>
   <div class="display-product">
     
-    <div class="card">
+    <div class="card" v-for="product in products" :key="product.id">
       <div class="gambar">
-        <img src="" alt="Gambar">
+        <img src="" alt="" width="200px">
       </div>
       <div class="container">
-        <h3><b>John Doe</b></h3>
-        <p>Architect & Engineer</p>
+        <h3><b>{{ product.title }}</b></h3>
+        <p>{{ product.category }}</p>
+        <p>{{ product.image }}</p>
         <hr>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quos provident quisquam voluptatem necessitatibus ex, aperiam nisi doloribus soluta molestias?</p>
+        <p>{{ product.description }}</p>
         <hr>
-        <p>$20.99</p>
+        <p>${{ product.price }}</p>
         <div class="tombol">
           <button style="margin-right: 10px; background-color: #720060; color: white;">
             <a href="" style="color: white; text-decoration: none;">Buy now</a>
@@ -22,13 +24,24 @@
         </div>
       </div>
     </div>
-
   </div>
+  
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld'
+  data() {
+    return{
+      products: []
+    }
+  },
+  mounted() {
+    fetch('https://fakestoreapi.com/products')
+    .then(res => res.json())
+    .then(data => this.products = data)
+    // eslint-disable-next-line no-undef
+    .catch(err = console.log(err.message))
+  }
 }
 </script>
 
@@ -46,6 +59,7 @@ export default {
     display: flex;
     background-color: #FFFFFF;
     border-radius: 5px;
+    margin-bottom: 30px;
   }
 
   .gambar {

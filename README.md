@@ -23,3 +23,11 @@ Pada task terakhir VIX Front End Developer Core Initiative ini, kalian diberikan
 3. Untuk memudahkan silakan buat variable pada CSS untuk menampung color palette yang sudah disediakan di section Color Palette di Figma
 4. Pada projek Vue yang telah dibuat, gunakan class binding untuk mengecek jika category = men’s clothing maka gunakan class CSS yang berkaitan dengan desain Page-Men section, jika category = women’s clothing, menggunakan class CSS yang berkaitan dengan desain Page-Women section, jika category selain 2 di atas, menggunakan class CSS yang berkaitan dengan desain Page-Unavailable product
 
+
+## Hasil Projek yang dibuat
+Dapat membuat Interface sesuai desain di figma, serta dapat menampilkan data produk yang ada pada API. dibuat dengan : Framework JavaScript Vue js & Vanila CSS.
+
+Beberapa fitur yg belum selesai :
+- Menampilkan banyak card produk, bukan satu card produk yg bisa di klik next. Jadi tombol next juga belum berfungsi
+- Kesesuaian warna dengan kategori
+- simbol atau icon rating

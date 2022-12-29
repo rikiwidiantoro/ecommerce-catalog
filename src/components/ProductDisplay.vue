@@ -4,16 +4,18 @@
     
     <div class="card" v-for="product in products" :key="product.id">
       <div class="gambar">
-        <img src="" alt="" width="200px">
+        <img :src="product.image" alt="gambar" width="200px">
       </div>
       <div class="container">
-        <h3><b>{{ product.title }}</b></h3>
-        <p>{{ product.category }}</p>
-        <p>{{ product.image }}</p>
+        <h2><b>{{ product.title }}</b></h2>
+        <div class="rating">
+          <span>{{ product.category }}</span>
+          <span class="rat">{{ product.rating.rate }}/5</span>
+        </div>
         <hr>
-        <p>{{ product.description }}</p>
+        <p style="text-align: justify;">{{ product.description }}</p>
         <hr>
-        <p>${{ product.price }}</p>
+        <h3>${{ product.price }}</h3>
         <div class="tombol">
           <button style="margin-right: 10px; background-color: #720060; color: white;">
             <a href="" style="color: white; text-decoration: none;">Buy now</a>
@@ -48,7 +50,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .display-product {
-    margin: 100px auto;
+    margin: 0px auto 100px;
     width: 1200px;
     height: 500px;
   }
@@ -65,7 +67,7 @@ export default {
   .gambar {
     flex: 1;
     width: 25%;
-    padding: 5px 20px;
+    padding: 25px 0px;
   }
 
   /* On mouse-over, add a deeper shadow */
@@ -76,10 +78,14 @@ export default {
   /* Add some padding inside the card container */
   .container {
     flex: 2;
-    padding: 5px 20px;
+    padding: 5px 50px 5px 0px;
     width: 75%;
     text-align: left;
     margin-bottom: 20px;
+  }
+
+  .rating .rat {
+    float: right;
   }
 
   button {

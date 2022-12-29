@@ -2,6 +2,9 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <div>
+      <h5>Dibuat oleh Riki Widiantoro | link repository : <a href="https://github.com/rikiwidiantoro/ecommerce-catalog" target="_blank">https://github.com/rikiwidiantoro/ecommerce-catalog</a></h5>
+    </div>
     <ProductDisplay/>
   </div>
 </template>
@@ -28,6 +31,7 @@ export default {
   margin-top: 60px;
 }
 body {
-  background-color: #FDE2FF;
+  background: linear-gradient(to bottom, #D6E6ff 50%, #FDE2FF 50%);
+  /* background-color: #FDE2FF; */
 }
 </style>

@@ -31,3 +31,15 @@ Beberapa fitur yg belum selesai :
 - Menampilkan banyak card produk, bukan satu card produk yg bisa di klik next. Jadi tombol next juga belum berfungsi
 - Kesesuaian warna dengan kategori
 - simbol atau icon rating
+
+
+## Cara Installasi
+1. Download file ini dengan klik button code berwarna hijau pada repository ini -> lalu klik Download ZIP atau dengan klik link dibawah
+```
+https://github.com/rikiwidiantoro/ecommerce-catalog/archive/refs/heads/main.zip
+```
+2. Download file ZIP node_modules dengan klik link dibawah
+```
+https://drive.google.com/file/d/1svBrIvC9kyV77Y4_wzYVGcge5cwhNYh5/view?usp=sharing
+```
+3. ekstrak kedua ZIP -> lalu pindahkan file node_modules ke file ecommerce-catalog sejajar dengan file src & public
